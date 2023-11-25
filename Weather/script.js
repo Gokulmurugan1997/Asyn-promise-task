@@ -1,39 +1,23 @@
-// function weatherdata(){
-//     let promise = new Promise((resolve,reject)=>{
-//         let cityName = document.getElementById('cityName').value;
-
-//         let request= fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=a43292ebbf1482b46db85b4a44f4a740`);
-
-//         var data = request.then((data2)=>data2.json()).then((data1)=>{console.log(data1)})
-//         if(request.status==200){
-//         resolve(data)
-//             }
-//             else{
-//                 reject("some error occured")
-//             }
-        
-//     })
-//     promise.then((data)=>{console.log(data)}).catch((err)=>{console.log(err)})
-//     }weatherdata()
-
-function weatherdata(){
-let promise = new Promise((resolve,reject)=>{
-
-    var request = new XMLHttpRequest();
-    let cityName = document.getElementById('cityName').value;
-    request.open('GET',`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=a43292ebbf1482b46db85b4a44f4a740`);
+function weatherData(){
     
-    request.send();
-   
-    request.onload = function(){
-        if(request.status==200){
-            var data = JSON.parse(request.response)
-    resolve(data)
-        }
-        else{
-            reject("some error occured")
-        }
+        var cityName = document.getElementById('cityName').value;
+
+        var res= fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=a43292ebbf1482b46db85b4a44f4a740`);
+        res.then((data2)=>data2.json()).then((data1)=>{console.log(data1)
+
+         var weatherCard = document.getElementById('weatherCard');
+        weatherCard.innerHTML = `<div class="card" style="width: 18rem">
+            <img src="https://img.freepik.com/free-vector/watercolor-weather-effects-collection_23-2149115331.jpg?size=626&ext=jpg&ga=GA1.1.1826414947.1698969600&semt=sph" class="card-img-top" alt="weather image">
+            <div class="card-body">
+              <h5 class="card-title">Weather Data</h5>
+              <p class="card-text">Temperature: ${data1.main.temp} </p>
+              <p class="card-text">Windspeed: ${data1.wind.speed} </p>
+            
+            </div>
+          </div>`
+    })
+
+    
     }
-})
-promise.then((data)=>{console.log(data)}).catch((err)=>{console.log(err)})
-}weatherdata()
+    
+  
