@@ -18,7 +18,7 @@ button{
     border: 1px solid red;
 border-radius: 10px;
 }
-#breweryCard{
+#mfgCard{
     position: absolute;
     left: 450px;
     top: 300px;

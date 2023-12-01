@@ -16,7 +16,7 @@ if(data1[i].city==stateName){
       }
       var mfgCard = document.getElementById('mfgCard');
         mfgCard.innerHTML = `<div class="card" style="width: 18rem">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9edqDBN6RCQgYRpwxTPBzcyKiTg5gZz3oYQ&usqp=CAU" class="card-img-top" alt="covid image">
+            <img src="https://clermontbrewingcompany.com/wp-content/uploads/2021/08/ClermontBrewingCompany_CentralFlorida.jpg" class="card-img-top" alt="Brewery image">
             <div class="card-body">
               <h5 class="card-title">Brewery Data</h5>
               <p class="card-text">Country: ${Country}</p>
