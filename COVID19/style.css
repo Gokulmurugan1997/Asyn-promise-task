@@ -2,7 +2,7 @@ body{
     background-color: aquamarine;
 }
 
-#cityName{
+#stateName{
     margin-left: 400px;
     margin-top: 100px;
 border: 1px solid red;
@@ -17,8 +17,9 @@ button{
     width: 100px;
     border: 1px solid red;
 border-radius: 10px;
+position: absolute;
 }
-#weatherCard{
+#covidCard{
     position: absolute;
     left: 450px;
     top: 300px;
@@ -31,4 +32,5 @@ h1{
     margin-left: 300px;
     font-size: 70px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: absolute;
 }

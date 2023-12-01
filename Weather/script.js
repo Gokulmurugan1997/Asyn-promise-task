@@ -15,6 +15,8 @@ function weatherData(){
               <h5 class="card-title">Weather Data</h5>
               <p class="card-text">Temperature: ${data1.main.temp} </p>
               <p class="card-text">Windspeed: ${data1.wind.speed} </p>
+
+              
             
             </div>
           </div>`
